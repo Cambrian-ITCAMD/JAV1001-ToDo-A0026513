@@ -27,6 +27,10 @@ class MainActivity : AppCompatActivity() {
             binding.llAddNewTodo.visibility = View.VISIBLE
         }
 
+        binding.btnCancelNewTodo.setOnClickListener{
+            binding.llAddNewTodo.visibility = View.GONE
+        }
+
         binding.btnSubmitNewTodo.setOnClickListener{
             if(binding.edtTitle.text.isNotEmpty()){
                 arrayList.add(ToDoContext(binding.edtTitle.text.toString(), false))
